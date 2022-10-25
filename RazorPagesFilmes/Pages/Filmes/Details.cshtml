@@ -1,0 +1,45 @@
+﻿@page
+@model RazorPagesFilmes.Pages.Filmes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>filme</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.filme.Titulo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.filme.Titulo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.filme.DataLancamento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.filme.DataLancamento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.filme.Genero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.filme.Genero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.filme.Preco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.filme.Preco)
+         <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.filme.Pontos)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.filme.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
